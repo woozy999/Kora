@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reset Settings</title>
+  <link rel="stylesheet" href="../css/textGeneration.css">
+  <link rel="stylesheet" href="../css/mainpageStyle.css">
+  <link rel="stylesheet" href="../css/resetStyle.css">
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="logo-banner" />
+    <a href="mainpage.html">Text Generation</a>
+    <a href="textTemplates.html">Templates</a>
+    <a href="colorSettings.html">Color Settings</a>
+    <a href="formatSettings.html">Format Settings</a>
+    <a href="about.html">About</a>
+    <a href="reset.html">RESET</a>
+</div>
+
+<div class="container">
+  <header class="header">
+    <button id="toggleSidebarButton" class="menu-icon">☰</button>
+    <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="header-logo" />
+  </header>
+
+<div class="center-content">
+    <p>Click the button below to reset all settings to their default values.</p>
+    <br>
+    <p><b>**THIS CANNOT BE UNDONE**</b></p>
+    <div class="button-container">
+      <button id="resetButton" class="styled-button reset">RESET</button>
+    </div>
+  </div>
+  <div id="resetMessage" class="hidden">Settings have been reset!</div>
+</div>
+
+<script src="../js/resetOptions.js"></script>
+</body>
+</html>

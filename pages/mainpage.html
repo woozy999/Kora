@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Maker</title>
+    <link rel="stylesheet" href="../css/textGeneration.css">
+    <link rel="stylesheet" href="../css/mainpageStyle.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="logo-banner" />
+        <a href="mainpage.html">Text Generation</a>
+        <a href="textTemplates.html">Templates</a>
+        <a href="colorSettings.html">Color Settings</a>
+        <a href="formatSettings.html">Format Settings</a>
+        <a href="about.html">About</a>
+        <a href="reset.html">RESET</a>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <button id="toggleSidebarButton" class="menu-icon">☰</button>
+            <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="header-logo" />
+        </header>
+
+        <p>Please note that this section is currently under development and may not function properly.</p>
+
+        <div class="button-container">
+            <button id="generateBtn" class="action-button">Generate</button>
+            <button id="clearBtn" class="action-button">Clear</button>
+        </div>
+
+        <div class="input-section">
+            <label for="promptInput" class="input-label">Prompt</label>
+            <input type="text" id="promptInput" placeholder="Enter your prompt here...">
+        </div>
+
+        <div class="input-section">
+            <label for="responseOutput" class="input-label">Response</label>
+            <textarea id="responseOutput" placeholder="Generated response will appear here..." readonly></textarea>
+        </div>
+    </div>
+
+    <button id="resetApiKeyBtn" class="reset-button">Reset API Key</button>
+
+    <script src="../js/textGeneration.js"></script>
+</body>
+</html>

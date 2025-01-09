@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #161616;
+  color: #f0f0f0;
+  padding: 20px;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #d30025;
+}
+
+.logo-banner {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+}
+
+#toggleSidebarButton {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.sidebar-open .sidebar {
+  transform: translateX(0);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  background-color: #444;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+textarea:focus, select:focus, input:focus {
+  border-color: #d30025;
+  outline: none;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+#saveMessage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #28a745;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Style specifically for the RESET sidebar link */
+.sidebar a[href="reset.html"] {
+  color: #d9534f;
+}
+
+.sidebar a[href="reset.html"]:hover {
+  background-color: #c9302c;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+#presetDropdown {
+  max-height: 150px; /* Adjust height as needed */
+  overflow-y: auto;
+  background-color: #333;
+  color: #f0f0f0;
+  border: 2px solid #555;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#presetDropdown option {
+  background-color: #444;
+  padding: 8px;
+  margin: 2px 0;
+}
+
+#presetDropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+#presetDropdown::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 4px;
+}
+
+#presetDropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #444;
+}
+
+/* Centering the icon container */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between each icon */
+  margin-top: 20px;
+}
+
+/* Shared icon container styling for each button */
+.icon-container div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Outer size around each image */
+  height: 40px;
+  padding: 0; /* Remove extra padding */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon-container div:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Styling for individual icons without color filters */
+#savePresetButton, #addPresetButton, #deletePresetButton {
+  background-color: transparent;
+  width: 40px; /* Uniform icon size */
+  height: 40px;
+  border: none;
+}
+
+/* Remove hover effects for add and delete icons */
+#addPresetButton:hover, #deletePresetButton:hover {
+  background-color: transparent;
+}
+
+/* Styling for export icon to match others */
+#exportPresetsButton {
+  background-color: transparent;
+  width: 40px; /* Uniform icon size */
+  height: 40px;
+  border: none;
+}
+
+/* Remove hover effects for the export icon */
+#exportPresetsButton:hover {
+  background-color: transparent;
+}

@@ -1,0 +1,32 @@
+/* Center the content in the reset page */
+.center-content {
+  text-align: center;
+}
+
+.center-content p {
+  margin-bottom: 20px;
+}
+
+.styled-button.reset {
+  background-color: #d9534f;
+  color: white;
+  margin: 0 auto; /* Center align the button */
+  display: block; /* Make the button block level to center it */
+}
+
+.styled-button.reset:hover {
+  background-color: #c9302c;
+}
+
+#resetMessage {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #d9534f; /* Red color for the message */
+  text-align: center;
+  display: none; /* Hidden initially */
+}
+
+/* Show resetMessage when not hidden */
+#resetMessage.visible {
+  display: block;
+}

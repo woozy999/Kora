@@ -1,0 +1,299 @@
+/* Basic Styling */
+:root {
+    --primary-color: #E94364; /* Main red color */
+    --bg-color: #2c2c2c; /* Dark background color */
+    --text-color: #ffffff; /* White text color */
+    --button-red: #d32f2f; /* Darker red for hover */
+    --button-gray: #444; /* Dark gray for buttons and fields */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: margin-left 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: -200px; /* Hidden by default */
+    height: 100%;
+    background-color: #1e1e1e;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    z-index: 1002;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.sidebar-open .sidebar {
+    left: 0; /* Move sidebar into view */
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+    border-radius: 4px;
+}
+
+.logo-banner {
+    width: 140px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* Adjustments for main container with sidebar open */
+body.sidebar-open .container {
+    margin-left: 220px; /* Offset for sidebar */
+    width: calc(100% - 220px); /* Shrink to fit while keeping a flexible width */
+    max-width: none; /* Remove max-width constraint */
+}
+
+/* Main Container */
+body.sidebar-open .container {
+    margin-left: 0;
+    width: 100%;
+}
+
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns elements to the left */
+    padding: 0 15px;
+    background-color: #1e1e1e; /* Dark background for header */
+    margin-bottom: 20px;
+}
+
+.header-logo {
+    width: 140px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.main-title {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1; /* Allows title to take remaining space */
+}
+
+/* Menu Button Styling */
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    margin-right: auto; /* Aligns the menu icon to the far left */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0 10px; /* Add padding on left and right of button container */
+}
+
+.action-button {
+    padding: 10px;
+    width: 45%;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#generateBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#generateBtn:hover {
+    background-color: #45a049;
+}
+
+#clearBtn {
+    background-color: var(--button-gray);
+    color: white;
+}
+
+#clearBtn:hover {
+    background-color: #555;
+}
+
+/* Input and Output Sections */
+.input-section {
+    margin: 1rem 0;
+    padding: 0 10px; /* Added padding to keep input sections from touching edges */
+}
+
+.input-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#promptInput,
+#responseOutput {
+    width: 100%;
+    padding: 15px; /* Internal padding for spacious appearance */
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: var(--button-gray);
+    color: white;
+    font-size: 1rem;
+    margin: 0 auto; /* Centers the text boxes */
+}
+
+#promptInput {
+    margin-top: 5px;
+    resize: vertical;
+}
+
+#responseOutput {
+    min-height: 150px;
+    resize: vertical;
+    overflow-y: auto;
+}
+
+/* Modal overlay and modal box styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #444;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.modal h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.modal input {
+    width: 100%;
+    padding: 15px; /* Padding for better spacing in modal */
+    margin: 1rem 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: var(--button-gray);
+    color: white;
+}
+
+/* Close Without Saving Button */
+.close-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: var(--button-red);
+}
+
+/* Save API Key Button */
+.save-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+.modal p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Feedback Message Styling */
+.feedback-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Loading Indicator */
+.loading {
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* Disabled Button Styling */
+.action-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* Reset Button */
+.reset-button {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 20px; /* Extra padding for the reset button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: var(--button-red);
+}

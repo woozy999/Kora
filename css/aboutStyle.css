@@ -1,0 +1,9 @@
+/* Center the content in the reset page */
+.center-content {
+    text-align: center;
+  }
+  
+  .center-content p {
+    margin-bottom: 20px;
+  }
+  

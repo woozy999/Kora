@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Maker</title>
+    <link rel="stylesheet" href="../css/textGeneration.css">
+    <link rel="stylesheet" href="../css/mainpageStyle.css">
+</head>
+<body>
+<div class="sidebar" id="sidebar">
+    <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="logo-banner" />
+    <a href="mainpage.html">Text Generation</a>
+    <a href="textTemplates.html">Templates</a>
+    <a href="colorSettings.html">Color Settings</a>
+    <a href="formatSettings.html">Format Settings</a>
+    <a href="about.html">About</a>
+    <a href="reset.html">RESET</a>
+</div>
+
+<div class="container">
+  <header class="header">
+    <button id="toggleSidebarButton" class="menu-icon">☰</button>
+    <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="header-logo" />
+  </header>
+
+  <div class="input-section">
+    <label for="presetDropdown" class="input-label">Choose a Preset:</label>
+    <select id="presetDropdown">
+      <option value="preset1">Preset 1</option>
+      <option value="preset2">Preset 2</option>
+      <option value="preset3">Preset 3</option>
+      <option value="preset4">Preset 4</option>
+      <option value="preset5">Preset 5</option>
+    </select>
+  </div>
+
+  <div class="input-section">
+    <label for="presetName" class="input-label">Preset Name:</label>
+    <input type="text" id="presetName" placeholder="Preset Name">
+  </div>
+
+  <div class="input-section">
+    <label for="presetText" class="input-label">Preset Message:</label>
+    <textarea id="presetText" maxlength="1000" placeholder="Edit your preset message here..."></textarea>
+    <div id="charCounter">0 / 1000</div>
+  </div>
+
+  <div class="icon-container">
+    <div id="addIconContainer">
+      <img id="addPresetButton" src="../assets/plus.png" alt="Add" />
+    </div>
+    <div id="deleteIconContainer">
+      <img id="deletePresetButton" src="../assets/remove.png" alt="Delete" />
+    </div>
+    <div id="saveIconContainer">
+      <img id="savePresetButton" src="../assets/save.png" alt="Save" />
+    </div>
+    <div id="exportIconContainer">
+      <img id="exportPresetsButton" src="../assets/export.png" alt="Export" />
+    </div>
+</div>
+  </div>
+  <div id="saveMessage" class="hidden">Preset saved!</div>
+</div>
+
+<script src="../js/textTemplateOptions.js"></script>
+</body>
+</html>

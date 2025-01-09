@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Settings</title>
+  <link rel="stylesheet" href="../css/textGeneration.css">
+  <link rel="stylesheet" href="../css/mainpageStyle.css">
+  <link rel="stylesheet" href="../css/colorStyle.css">
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="logo-banner" />
+    <a href="mainpage.html">Text Generation</a>
+    <a href="textTemplates.html">Templates</a>
+    <a href="colorSettings.html">Color Settings</a>
+    <a href="formatSettings.html">Format Settings</a>
+    <a href="about.html">About</a>
+    <a href="reset.html">RESET</a>
+</div>
+
+  <div class="container">
+    <header class="header">
+      <button id="toggleSidebarButton" class="menu-icon">☰</button>
+      <img src="../assets/KORA_LOGO.png" alt="KORA Logo" class="header-logo" />
+    </header>
+
+    <div class="preset-combos">
+      <label for="presetSelect">Choose a Preset Color Combo:</label>
+      <select id="presetSelect">
+          <option value="" disabled selected>Select a preset</option>
+          <option value="combo1">Combo 1 (Blue/Green)</option>
+          <option value="combo2">Combo 2 (Red/Yellow)</option>
+          <option value="combo3">Combo 3 (Purple/Orange)</option>
+          <option value="combo4">Combo 4 (Gray/Black)</option>
+          <option value="combo5">Combo 5 (Teal/Pink)</option>
+      </select>
+      <input type="text" id="presetName" placeholder="Enter preset name" />
+    </div>
+
+    <div class="color-picker-container">
+      <div class="color-picker">
+        <label for="outgoingColor">Outgoing Message Background:</label>
+        <input type="color" id="outgoingColor" value="#007bff">
+      </div>
+      <div class="color-picker">
+        <label for="incomingColor">Incoming Message Background:</label>
+        <input type="color" id="incomingColor" value="#28a745">
+      </div>
+    </div>
+
+    <div class="color-picker-container">
+      <div class="color-picker">
+        <label for="outgoingTextColor">Outgoing Message Text Color:</label>
+        <input type="color" id="outgoingTextColor" value="#ffffff">
+      </div>
+      <div class="color-picker">
+        <label for="incomingTextColor">Incoming Message Text Color:</label>
+        <input type="color" id="incomingTextColor" value="#ffffff">
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button id="saveButton" class="styled-button">Save Settings</button>
+    </div>
+    <div class="message" id="message"></div>
+  </div>
+
+<script src="../js/colorSettingsOptions.js"></script>
+</body>
+</html>
